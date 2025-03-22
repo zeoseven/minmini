@@ -2,10 +2,9 @@
     "type": "module",
     "scripts": {
         "d": "vitepress dev",
-        "b": "vitepress build && minmini build"
+        "b": "vitepress build"
     },
     "devDependencies": {
-        "minmini": "^1.1.0",
         "vitepress": "^1.6.3"
     }
 }

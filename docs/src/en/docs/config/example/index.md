@@ -2,6 +2,9 @@
 
 Configured according to the framework's default build directory.
 
+> [!WARNING]
+> It is not recommended to use minmini in the framework of an existing minimization function, as this may lead to hydration errors.
+
 
 
 ## Next.js
