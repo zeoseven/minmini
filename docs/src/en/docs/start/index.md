@@ -33,21 +33,9 @@ yarn install -D minmini
 
 If you're just using it locally, you can use a global installation.
 
-::: code-group
-
-```sh [npm]
+```sh
 npm install -g minmini
 ```
-
-```sh [pnpm]
-pnpm install -g minmini
-```
-
-```sh [yarn]
-yarn install -g minmini
-```
-
-:::
 
 
 

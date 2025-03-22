@@ -33,21 +33,9 @@ yarn install -D minmini
 
 如果仅仅是在本地使用，则可以使用全局安装。
 
-::: code-group
-
-```sh [npm]
+```sh
 npm install -g minmini
 ```
-
-```sh [pnpm]
-pnpm install -g minmini
-```
-
-```sh [yarn]
-yarn install -g minmini
-```
-
-:::
 
 
 
