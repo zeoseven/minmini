@@ -5,7 +5,7 @@
         "b": "vitepress build && minmini build"
     },
     "devDependencies": {
-        "minmini": "^1.0.6",
-        "vitepress": "^1.6.3"
+        "vitepress": "^1.6.3",
+        "minmini": "^1.0.6"
     }
 }
