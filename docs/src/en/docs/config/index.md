@@ -1,10 +1,10 @@
-# 配置项
+# Configuration items
 
-minmini 继承了 [依赖](../#依赖) 的部分配置项。
+minmini inherits some configurations from [dependencies](../#dependencies).  
 
 
 
-## 影响范围
+## Impact scopes
 
 - `config.html.*` ==> .html, .htm
 - `config.css.*` ==> .css, .html&lt;style&gt;, .htm&lt;style&gt;
@@ -16,7 +16,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## outDir
 
-指定输出目录，压缩完成的生产文件将会输出到该目录。
+Specifies the output directory for production files after compression.
 
 `String` `config.outDir || "minOutput/"`
 
@@ -30,7 +30,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## baseDir
 
-指定输入目录，压缩前需要处理的文件将会从该目录读取。
+Specifies the input directory to read files for processing.
 
 `String` `config.baseDir || "src/"`
 
@@ -44,7 +44,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## cleanOutDir
 
-压缩前先删除旧的输出。
+Delete old output directory before compression.
 
 `Boolean` `config.cleanOutDir || true`
 
@@ -58,7 +58,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## ignorePaths
 
-基于 baseDir 忽略目录，不计入文件总数，直接复制到输出目录。
+Directories (relative to baseDir) to ignore and directly copy to output.
 
 `Array` `config.ignorePaths || undefined`
 
@@ -76,7 +76,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.noMinify
 
-如果为 true ，则不压缩 .html 和 .htm 文件，直接复制到输出目录。
+Disable HTML minification, directly copy .html/.htm files.
 
 `Boolean` `config.html.noMinify || undefined`
 
@@ -92,7 +92,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.minifyCSS
 
-如果为 false ，则不压缩 .html 和 .htm 文件中 style 标签中的 CSS 代码以及 style="" 中的内联样式。
+If false, the CSS code in the style tag in the .html and .htm files and the inline styles in style="" are not compressed.
 
 `Boolean` `config.html.minifyCSS || true`
 
@@ -108,7 +108,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.minifyJS
 
-如果为 false ，则不压缩 .html 和 .htm 文件中 script 标签中的 JS 代码。
+If false, the JS code in the script tag in the .html and .htm files is not compressed.
 
 `Boolean` `config.html.minifyJS || true`
 
@@ -124,7 +124,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.noMinifyInlineStyles
 
-不再对 style="" 值进行压缩。
+The style="" value is no longer compressed.
 
 `Boolean` `config.noMinifyInlineStyles || false`
 
@@ -138,7 +138,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.caseSensitive
 
-如果为 false，则 HTML 属性不区分大小写。
+If false, the HTML attribute is not case-sensitive.
 
 `Boolean` `config.html.caseSensitive || true`
 
@@ -154,7 +154,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.collapseBooleanAttributes
 
-如果为 true，则压缩 HTML 中的布尔属性，省略属性的值，如 disabled="disabled" 将被压缩为 disabled。
+If true, the Boolean attribute in the HTML is compressed, and the value of the omitted attribute such as disabled="disabled" is compressed to disabled.
 
 `Boolean` `config.html.collapseBooleanAttributes || true`
 
@@ -169,7 +169,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.collapseWhitespace
 
-如果为 true，则压缩 HTML 中的空白，如 &lt;h1&gt; <span style="padding: 0 1rem;">title</span> &lt;/h1&gt; 将被压缩为 &lt;h1&gt;title&lt;/h1&gt;。这不会影响 script, style, textarea, pre 等标签中的重要空白。
+If true, compress the white space in the HTML, such as &lt;h1&gt; <span style="padding: 0 1rem;">title</span> &lt;/h1&gt; will be compressed to &lt;h1&gt;title&lt;/h1&gt;. This doesn't affect important whitespace in tags like script, style, textarea, pre, etc.
 
 `Boolean` `config.html.collapseWhitespace || true`
 
@@ -185,7 +185,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.conservativeCollapse
 
-如果为 true，则在压缩 HTML 遇到空白时，始终保留 1 个空格。它必须和 [html.collapseWhitespace](#html-collapsewhitespace) 一起使用。影响范围和 html.collapseWhitespace 一致。
+If true, 1 space is always left when the minified HTML encounters whitespace. It must be used with [html.collapseWhitespace](#html-collapsewhitespace). The scope of influence is the same as html.collapseWhitespace.
 
 `Boolean` `config.html.conservativeCollapse || false`
 
@@ -201,7 +201,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.decodeEntities
 
-尽可能将 HTML 实体解码为 Unicode 字符。
+Decode HTML entities into Unicode characters whenever possible.
 
 `Boolean` `config.html.decodeEntities || false`
 
@@ -217,7 +217,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.html5
 
-使用 HTML5 规范解析。
+Parsed using the HTML5 specification.
 
 `Boolean` `config.html.html5 || true`
 
@@ -233,7 +233,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.removeComments
 
-移除 HTML 中的注释。
+Remove comments from HTML.
 
 `Boolean` `config.html.removeComments || true`
 
@@ -249,7 +249,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.removeEmptyAttributes
 
-移除 HTML 中可安全移除的空属性，但不会移除必需的属性，如 img[src=""] 等。
+Remove empty attributes in HTML that are safe to remove, but do not remove required attributes such as img[src=""], and so on.
 
 `Boolean` `config.html.removeEmptyAttributes || true`
 
@@ -265,7 +265,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.removeScriptTypeAttributes
 
-&lt;script type="text/javascript"&gt; 将被压缩为 &lt;script&gt;，其它 type 属性值不变。
+&lt;script type="text/javascript"&gt; will be compressed into &lt;script&gt; with the other type property values unchanged.
 
 `Boolean` `config.html.removeScriptTypeAttributes || false`
 
@@ -281,7 +281,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.removeStyleLinkTypeAttributes
 
-删除 link 和 style 的 type="text/css" 属性，其它 type 属性值不变。
+Remove the type="text/css" attribute of link and style, and leave the other type property values unchanged.
 
 `Boolean` `config.html.removeStyleLinkTypeAttributes || false`
 
@@ -297,7 +297,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## html.keepClosingSlash
 
-保留 HTML 中的斜杠，如 &lt;br /&gt; 将不会压缩为 &lt;br&gt; 而是 &lt;br /&gt;。
+Keeping slashes in HTML such as &lt;br /&gt; will not be compressed to &lt;br&gt; but &lt;br /&gt;.
 
 `Boolean` `config.html.keepClosingSlash || true`
 
@@ -313,7 +313,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## css.noMinify
 
-不压缩 .css 文件，直接复制到输出目录。
+The .css file is not compressed, and is copied directly to the output directory.
 
 `Boolean` `config.css.noMinify || false`
 
@@ -329,7 +329,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## css.sourceMap
 
-在输出目录中生成 .css.map 文件。
+Generate a .css.map file in the output directory.
 
 `Boolean` `config.css.sourceMap || false`
 
@@ -345,7 +345,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## css.sourceMapInlineSources
 
-将 CSS 内容放入 .map 文件中。
+Put the CSS content into a .map file.
 
 `Boolean` `config.css.sourceMapInlineSources || true`
 
@@ -361,16 +361,16 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## css.compatibility
 
-压缩 CSS 和 style 标签的兼容性设置，不会影响 style="" 内联样式的压缩算法。
+The compatibility setting for the compressed CSS and style tags does not affect the compression algorithm for style="" inline styles.
 
 `String` `config.css.compatibility || "*"`
 
 | Value | Description |
 | ----  | ----------- |
-|   *   | 兼容 IE10+ |
-|   ie9 | 兼容 IE9+ |
-|   ie8 | 兼容 IE8+ |
-|   ie7 | 兼容 IE7+ |
+|   *   | IE10+ compatible |
+|   ie9 | IE9+ compatible |
+|   ie8 | IE8+ compatible |
+|   ie7 | IE7+ compatible |
 
 ```json
 {
@@ -384,15 +384,15 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## css.level
 
-压缩 CSS 和 style 标签的优化级别，不会影响 style="" 内联样式的压缩算法。
+The level of optimization for compressing CSS and style tags does not affect the compression algorithm for style="" inline styles.
 
 `Number` `config.css.level || 1`
 
 | Value | Description |
 | :---: | ----------- |
-|   0   | 无优化，通常被认为是安全的，保留注释 |
-|   1   | 使用较为安全的优化，不保留注释 |
-|   2   | 可能删除、移动、重组规则，可能出现问题，不保留注释 |
+|   0   | No optimization, which is generally considered safe, retains comments |
+|   1   | Use safer optimizations and don't keep comments |
+|   2   | Rules may be deleted, moved, reorganized, and problems may occur, and comments are not retained |
 
 ```json
 {
@@ -406,14 +406,14 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 ## css.format
 
-CSS 和 style 标签的输出格式。
+The output format of CSS and style tags.
 
 `String` `config.css.format || false`
 
 |    Value    | Description |
 | :---------: | ----------- |
-| keep-breaks | 保留换行符 |
-|   beautify  | 美化输出，保持可读性 |
+| keep-breaks | Keep line breaks |
+|   beautify  | Beautify the output and maintain readability |
 
 ```json
 {
@@ -427,18 +427,18 @@ CSS 和 style 标签的输出格式。
 
 ## css.inline
 
-将 @import 等引入的 CSS 文件内容直接内联到当前 CSS 文件或 style 标签中。
+Inline the contents of CSS files ingested by @import and the like directly into the current CSS file or style tags.
 
 `Array | Boolean` `config.css.inline || false`
 
 | Value | Description |
 | :---: | ----------- |
-| ["all"] | 内联所有引入的 CSS 文件 |
-| ["local"] | 内联本地引入的 CSS 文件 |
-| ["remote"] | 内联远程引入的 CSS 文件 |
-| ["!&lt;String&gt;"] | 不内联特定源的 CSS 文件 |
-| ["&lt;String&gt;"] | 内联特定源的 CSS 文件 |
-| &lt;Boolean&gt; false | 保留 @import 语句 |
+| ["all"] | Inline all ingested CSS files |
+| ["local"] | Inline locally ingested CSS files |
+| ["remote"] | Inline remotely ingested CSS files |
+| ["!&lt;String&gt;"] | CSS files that don't inline specific sources |
+| ["&lt;String&gt;"] | Inline CSS files for specific sources |
+| &lt;Boolean&gt; false | Leave the @import statement |
 
 
 ```json
@@ -453,7 +453,7 @@ CSS 和 style 标签的输出格式。
 
 ## js.noMinify
 
-不压缩 .js 文件，直接复制到输出目录。
+The .js file is not compressed, and is copied directly to the output directory.
 
 `Boolean` `config.js.noMinify || false`
 
@@ -469,7 +469,7 @@ CSS 和 style 标签的输出格式。
 
 ## js.compress.dead_code
 
-删除未使用的代码。
+Delete unused code.
 
 `Boolean` `config.js.compress.dead_code || true`
 
@@ -487,7 +487,7 @@ CSS 和 style 标签的输出格式。
 
 ## js.compress.drop_console
 
-删除 console.* 的调用。
+Delete the call to console.*.
 
 `Boolean` `config.js.compress.drop_console || false`
 
@@ -505,7 +505,7 @@ CSS 和 style 标签的输出格式。
 
 ## json.noMinify
 
-不压缩 .json 文件，直接复制到输出目录。
+The .json file is not compressed, copied directly to the output directory.
 
 `Boolean` `config.json.noMinify || false`
 
@@ -521,7 +521,7 @@ CSS 和 style 标签的输出格式。
 
 ## xml.noMinify
 
-不压缩 .xml 文件，直接复制到输出目录。
+The .xml file is not compressed, and is copied directly to the output directory.
 
 `Boolean` `config.xml.noMinify || false`
 
@@ -537,7 +537,7 @@ CSS 和 style 标签的输出格式。
 
 ## xml.removeComments
 
-移除 .xml 和 .svg 中的注释。
+Remove annotations from .xml and .svg.
 
 `Boolean` `config.xml.removeComments || true`
 
@@ -553,7 +553,7 @@ CSS 和 style 标签的输出格式。
 
 ## xml.removeWhitespaceBetweenTags
 
-移除 .xml 和 .svg 中的空白。
+Remove blank space in .xml and .svg.
 
 `Boolean` `config.xml.removeWhitespaceBetweenTags || true`
 

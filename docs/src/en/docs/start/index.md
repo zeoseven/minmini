@@ -1,17 +1,17 @@
-# 快速开始
+# Get started quickly
 
 
 
-## 安装
+## Installation
 
 
 
-#### 必需的前置条件
+#### Required prerequisites
 
 - [Node.js](https://nodejs.org/) >= 18
 - CLI
 
-通常来说， minmini 通过配置后可以安装在大部分的现有项目中。默认 baseDir 为 `src/` 目录，outDir 为 `minOutput/` 目录。
+In general, minmini can be configured to be installed in most existing projects. The default baseDir is the `src/` directory and outDir is the `minOutput/` directory.
 
 ::: code-group
 
@@ -31,7 +31,7 @@ yarn install -D minmini
 
 
 
-如果仅仅是在本地使用，则可以使用全局安装。
+If you're just using it locally, you can use a global installation.
 
 ::: code-group
 
@@ -51,9 +51,9 @@ yarn install -g minmini
 
 
 
-## 输出
+## Output
 
-没有其它命令，也没有其它参数，如果没有 minmini.config.json 或为空时，默认情况下 minmini 会开始压缩 `src/` 目录下的所有文件，并输出到 `minOutput/` 目录下。
+There are no other commands, no other parameters, if there is no minmini.config.json or if it is empty, by default minmini will start compressing all files in the `src/` directory and output them to the `minOutput/` directory.
 
 ::: code-group
 
@@ -69,9 +69,9 @@ minmini build
 
 
 
-## 使用 ESM
+## Use ESM
 
-如果在 .js 文件中调用，那么 minmini.config.json 会被忽略，可以将配置直接传递。
+If it's called in a .js file, then minmini.config.json is ignored and the configuration can be passed directly.
 
 ```js
 import minmini from 'minmini';
@@ -83,11 +83,11 @@ await minmini({
 });
 ```
 
-- [配置项](../config/)
+- [Configuration items](../config/)
 
 
 
-## 文件结构
+## File structure
 
 ```
 .
