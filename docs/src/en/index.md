@@ -10,11 +10,11 @@ hero:
   tagline: "Source code minimization compressor for static files"
   actions:
     - theme: brand
-      text: About minmini
-      link: ./docs/
-    - theme: alt
       text: Get started quickly
       link: ./docs/start/
+    - theme: alt
+      text: About minmini
+      link: ./docs/
     - theme: alt
       text: Configuration items
       link: ./docs/config/

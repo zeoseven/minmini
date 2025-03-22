@@ -10,11 +10,11 @@ hero:
   tagline: "适用于静态文件的源码最小化压缩器"
   actions:
     - theme: brand
-      text: 关于 minmini
-      link: ./docs/
-    - theme: alt
       text: 快速开始
       link: ./docs/start/
+    - theme: alt
+      text: 关于 minmini
+      link: ./docs/
     - theme: alt
       text: 配置项
       link: ./docs/config/

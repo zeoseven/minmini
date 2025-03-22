@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       minmini:
-        specifier: ^1.0.6
-        version: 1.0.6
+        specifier: ^1.1.0
+        version: 1.1.0
       vitepress:
         specifier: ^1.6.3
         version: 1.6.3(@algolia/client-search@5.21.0)(postcss@8.5.3)(search-insights@2.17.3)(terser@5.39.0)
@@ -913,8 +913,8 @@ packages:
   minisearch@7.1.2:
     resolution: {integrity: sha512-R1Pd9eF+MD5JYDDSPAp/q1ougKglm14uEkPMvQ/05RGmx6G9wvmLTrTI/Q5iPNJLYqNdsDQ7qTGIcNWR+FrHmA==}
 
-  minmini@1.0.6:
-    resolution: {integrity: sha512-91ZHnyS6nyEqgdP97K6/97H6twf4GuXnK567ic/rhwh8UzISrZA6PMLQSxj3u55ls5gwDZTghcznDx4A0DSa4g==}
+  minmini@1.1.0:
+    resolution: {integrity: sha512-DA2Rx6ZAYNlfqZtezqA1qw1BymS2VEdP1+8GailXkTvvSIoeznjrW2XDtcf56jM+GEfu9MgR7W9XfONsEbkcEQ==}
     hasBin: true
 
   mitt@3.0.1:
@@ -2062,7 +2062,7 @@ snapshots:
 
   minisearch@7.1.2: {}
 
-  minmini@1.0.6:
+  minmini@1.1.0:
     dependencies:
       chalk: 5.4.1
       clean-css: 5.3.3

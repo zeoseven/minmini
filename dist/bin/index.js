@@ -16,11 +16,11 @@ program.command('build').action(async () => {
       config = null;
     };
 
-    await core(
-      initConfig(config)
-    );
+    config = initConfig(config);
+
+    await core(config);
   } catch (e) {
-    console.log(chalk.red(`  Error: ${e.message}  `));
+    console.log(chalk.red(`    Error: ${e.message}`));
     console.log(` `);
     process.exit(1);
   };

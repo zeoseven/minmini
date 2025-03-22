@@ -5,4 +5,5 @@ Create a <u>minmini.config.json</u> file in the root directory of your project (
 > If you want to use the default but need to keep the configuration name in minmini.config.json, you can use null because undefined is not allowed in JSON.
 
 - [File structure](../../start/#file-structure)
+- [Example configuration](../example/)
 - [Configuration items](../../config/)

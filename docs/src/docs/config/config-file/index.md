@@ -5,4 +5,5 @@
 > 如果希望使用默认值但需要在 minmini.config.json 中保留配置名称，可以使用 null ，因为 undefined 在 JSON 中不允许。
 
 - [文件结构](../../start/#文件结构)
+- [示例配置](../example/)
 - [配置项](../../config/)

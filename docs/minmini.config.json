@@ -1,4 +1,4 @@
 {
     "baseDir": ".vitepress/dist/",
-    "outDir": ".vitepress/output/"
+    "outDir": ".vitepress/dist/"
 }

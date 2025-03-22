@@ -16,7 +16,8 @@ async function core(config) {
 
   const vars = {
     startTime: Date.now(),
-    outputNumber: 0
+    outputNumber: 0,
+    outDirIsBaseDir: false
   };
 
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -36,14 +37,21 @@ async function core(config) {
 
 
 
-  const _outDir = config.outDir && config.outDir.replace("\\/g", "").replace("./", "");
-  const outDir = config.outDir ?
+  const _outDir = config.outDir && config.outDir.replace("./", "");
+  let outDir = config.outDir ?
     config.outDir.endsWith("/") ? _outDir : _outDir + "/" :
     'minOutput/';
 
   const baseDir = config.baseDir ?
     config.baseDir.endsWith("/") ? config.baseDir : config.baseDir + "/" :
     'src/';
+
+  if (outDir == baseDir) {
+    outDir = `.minmini/temp-${vars.startTime}/`;
+    vars.outDirIsBaseDir = true;
+
+    console.log(chalk.yellow(`    Warning: outDir === baseDir, The files in the baseDir will be deleted.`));
+  };
 
 
 
@@ -269,6 +277,14 @@ async function core(config) {
 
 
 
+  };
+
+
+
+  if (vars.outDirIsBaseDir) {
+    fse.removeSync(baseDir);
+    fse.moveSync(outDir, baseDir);
+    fse.removeSync(".minmini/");
   };
 
 

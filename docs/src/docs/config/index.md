@@ -2,6 +2,9 @@
 
 minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
+> [!CAUTION]
+> 当 baseDir 和 outDir 相同时， minmini 会创建一个临时目录作为 outDir ，baseDir 中的文件将会被覆盖。
+
 
 
 ## 影响范围

@@ -2,6 +2,9 @@
 
 minmini inherits some configurations from [dependencies](../#dependencies).  
 
+> [!CAUTION]
+> When baseDir and outDir are the same, minmini will create a temporary directory as outDir and the files in the baseDir will be overwritten.
+
 
 
 ## Impact scopes
