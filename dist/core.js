@@ -133,15 +133,16 @@ async function core(config) {
         const result = await htmlMinify(fs.readFileSync(baseDir + file, 'utf8'), {
           minifyJS: funValue(config.html.minifyJS, async (js) => {
             try {
-              const originJS = js;
-              let result = await terser(originJS, {
+              let result = null;
+              const tmpResult = await terser(js, {
                 compress: {
                   dead_code: value(config.js.compress.dead_code, true),
                   drop_console: value(config.js.compress.drop_console, false)
                 }
-              }).code;
+              });
+              result = tmpResult.code;
               config.js.noSpaces && (result = result.replace(/ {2,}/g, ''));
-              return result.code.trim() != "" ? result : originJS;
+              return result.trim() != "" ? result : js;
             } catch {
               return js;
             };
@@ -190,12 +191,13 @@ async function core(config) {
 
         let result = null;
         try {
-          result = await terser(jsCode, {
+          const tmpResult = await terser(jsCode, {
             compress: {
               dead_code: value(config.js.compress.dead_code, true),
               drop_console: value(config.js.compress.drop_console, false)
             }
-          }).code;
+          });
+          result = tmpResult.code;
           config.js.noSpaces && (result = result.replace(/ {2,}/g, ''));
         } catch (e) {
           result = jsCode;
