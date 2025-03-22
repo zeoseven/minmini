@@ -26,4 +26,4 @@ minmini build
 
 ## Documentation and configuration items
 
-Documentation and configuration items can be found at <a href="https://minmini.zeoseven.com">minmini.zeoseven.com</a> or <a href="https://github.com/zeoseven/minmini/blob/main/docs/src/en/docs/index.md">/docs/index.md</a> access.
+Documentation and configuration items can be found at <a href="https://minmini.zeoseven.com/en/">minmini.zeoseven.com</a> or <a href="https://github.com/zeoseven/minmini/blob/main/docs/src/en/docs/index.md">/docs/index.md</a> access.
