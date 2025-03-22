@@ -134,8 +134,14 @@ async function core(config) {
           minifyJS: funValue(config.html.minifyJS, async (js) => {
             try {
               const originJS = js;
-              const result = await terser(originJS, {});
-              return result.code.trim() != "" ? result.code : originJS;
+              let result = await terser(originJS, {
+                compress: {
+                  dead_code: value(config.js.compress.dead_code, true),
+                  drop_console: value(config.js.compress.drop_console, false)
+                }
+              }).code;
+              config.js.noSpaces && (result = result.replace(/ {2,}/g, ''));
+              return result.code.trim() != "" ? result : originJS;
             } catch {
               return js;
             };
@@ -189,12 +195,13 @@ async function core(config) {
               dead_code: value(config.js.compress.dead_code, true),
               drop_console: value(config.js.compress.drop_console, false)
             }
-          });
+          }).code;
+          config.js.noSpaces && (result = result.replace(/ {2,}/g, ''));
         } catch (e) {
-          result = jsCode
+          result = jsCode;
         };
 
-        output(outDir + file, result.code);
+        output(outDir + file, result);
       };
     };
 

@@ -467,6 +467,25 @@ The .js file is not compressed, and is copied directly to the output directory.
 
 
 
+## js.noSpaces
+
+> [!WARNING]
+> Relatively aggressive，This can cause your code to not run.
+
+Remove two or more consecutive spaces, Applies to possible extra spaces in the compressed template string.
+
+`Boolean` `config.js.noSpaces || false`
+
+```json
+{
+    "js": {
+        "noSpaces": true
+    }
+}
+```
+
+
+
 ## js.compress.dead_code
 
 Delete unused code.

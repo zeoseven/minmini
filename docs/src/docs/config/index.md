@@ -467,6 +467,25 @@ CSS 和 style 标签的输出格式。
 
 
 
+## js.noSpaces
+
+> [!WARNING]
+> 较为激进，可能会导致代码无法运行。
+
+删除两个及以上的连续空格，适用于压缩后模板字符串中可能的多余空格。
+
+`Boolean` `config.js.noSpaces || false`
+
+```json
+{
+    "js": {
+        "noSpaces": true
+    }
+}
+```
+
+
+
 ## js.compress.dead_code
 
 删除未使用的代码。
