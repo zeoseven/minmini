@@ -1,0 +1,38 @@
+{
+    "name": "minmini",
+    "version": "1.0.1",
+    "author": "ZeoSeven",
+    "license": "MIT",
+    "description": "Build Faster, Smaller Static Web Projects",
+    "keywords": [
+        "minmini",
+        "build",
+        "compress"
+    ],
+    "homepage": "https://minmini.zeoseven.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zeoseven/minmini"
+    },
+    "type": "module",
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "bin": {
+        "minmini": "./dist/bin/index.js"
+    },
+    "exports": {
+        ".": "./dist/index.mjs"
+    },
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "clean-css": "^5.3.2",
+        "commander": "^13.1.0",
+        "fs-extra": "^11.3.0",
+        "glob": "^11.0.1",
+        "html-minifier-terser": "^7.2.0",
+        "minify-xml": "^4.5.2",
+        "sharp": "^0.33.5",
+        "terser": "^5.39.0"
+    }
+}

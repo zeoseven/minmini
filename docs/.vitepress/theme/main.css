@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+:root {
+    --vp-font-family-base: "Geist", system-ui, sans-serif, serif, monospace;
+    --vp-font-family-mono: "Cascadia Mono", "Consolas", "Menlo", "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Roboto Mono", "San Francisco Mono", monospace;
+}
