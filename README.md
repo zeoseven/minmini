@@ -1,6 +1,6 @@
 # minmini - Build Faster, Smaller Static Web Projects
 
-minmini is a lightweight, zero-configuration usable source code minimization compressor that works and behaves like a traditional packager, minmini takes all the files in a directory and filters out the supported web files and compresses them one by one, **while maintaining the original path in the output directory**.
+minmini is a zero-configuration minimalist source code compressor that functions similarly to traditional bundlers. It retrieves all files from a directory, filters out supported web files for individual compression, **and preserves the original directory paths in the output**.
 
 ## Get started
 
