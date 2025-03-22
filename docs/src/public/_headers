@@ -1,3 +1,7 @@
 /*
     ! Access-Control-Allow-Origin
-    Cache-Control: public, max-age=180
+    Cache-Control: public, max-age=43200
+
+/assets/*
+    ! Access-Control-Allow-Origin
+    Cache-Control: public, max-age=31536000, immutable
