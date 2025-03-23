@@ -7,31 +7,28 @@
 
 
 
-## Next.js
+## 压缩构建时忽略的目录
+
+public/ 文件夹通常被用作静态文件目录，它们不会被构建，假设 public/more/ 用于存放独立于页面的静态文件，输出目录为 out/ 并希望只压缩 /more/ 中的文件。
+
+在构建完成后，以这样的配置运行 minmini 。
 
 ```json
 {
-    "baseDir": "out/",
-    "outDir": "minOutput/"
+    "baseDir": "out/more/",
+    "outDir": "out/more/"
 }
 ```
 
-如果不想使用多余的目录，可以将它们配置为相同， minmini 会自动处理它们。
+无需改变可能的文件引入， minmini 会保持原有目录结构。
+
+甚至说，在构建完成之后，直接压缩 public/ 中的所有文件后替换构建目录，但需要注意设置 cleanOutDir 为 false。
 
 ```json
 {
-    "baseDir": "out/",
-    "outDir": "out/"
+    "baseDir": "public/",
+    "outDir": "out/",
+    "cleanOutDir": false
 }
 ```
 
-
-
-## VitePress
-
-```json
-{
-    "baseDir": ".vitepress/dist/",
-    "outDir": ".vitepress/dist/"
-}
-```

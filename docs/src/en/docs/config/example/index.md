@@ -7,31 +7,27 @@ Configured according to the framework's default build directory.
 
 
 
-## Next.js
+## Compress directories that are ignored when building
+
+The public/ folder is often used as a static file directory, they are not built, assuming public/more/ is used to hold static files independent of the page, and the output directory is out/ and you want to compress only the files in /more/.
+
+After the build is complete, run minmini in this configuration.
 
 ```json
 {
-    "baseDir": "out/",
-    "outDir": "minOutput/"
+    "baseDir": "out/more/",
+    "outDir": "out/more/"
 }
 ```
 
-If you don't want to use redundant directories, you can configure them to be the same, and minmini will handle them automatically.
+There is no need to change the possible file import, minmini will maintain the original directory structure.
+
+It is even said that after the build is completed, all the files in public/ in development are directly compressed and output to the build directory, but you need to pay attention to setting cleanOutDir to false.
 
 ```json
 {
-    "baseDir": "out/",
-    "outDir": "out/"
-}
-```
-
-
-
-## VitePress
-
-```json
-{
-    "baseDir": ".vitepress/dist/",
-    "outDir": ".vitepress/dist/"
+    "baseDir": "public/",
+    "outDir": "out/",
+    "cleanOutDir": false
 }
 ```
