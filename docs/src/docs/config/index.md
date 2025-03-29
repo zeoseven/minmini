@@ -11,7 +11,7 @@ minmini 继承了 [依赖](../#依赖) 的部分配置项。
 
 - `config.html.*` ==> .html, .htm
 - `config.css.*` ==> .css, .html&lt;style&gt;, .htm&lt;style&gt;
-- `config.js.*` ==> .js, .html&lt;script&gt;, .htm&lt;script&gt;
+- `config.js.*` ==> .js, .mjs, .html&lt;script&gt;, .htm&lt;script&gt;
 - `config.json.*` ==> .json
 - `config.xml.*` ==> .xml, .svg
 
@@ -456,7 +456,7 @@ CSS 和 style 标签的输出格式。
 
 ## js.noMinify
 
-不压缩 .js 文件，直接复制到输出目录。
+不压缩 .js 和 .mjs 文件，直接复制到输出目录。
 
 `Boolean` `config.js.noMinify || false`
 

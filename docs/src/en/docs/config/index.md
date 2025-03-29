@@ -11,7 +11,7 @@ minmini inherits some configurations from [dependencies](../#dependencies).
 
 - `config.html.*` ==> .html, .htm
 - `config.css.*` ==> .css, .html&lt;style&gt;, .htm&lt;style&gt;
-- `config.js.*` ==> .js, .html&lt;script&gt;, .htm&lt;script&gt;
+- `config.js.*` ==> .js, .mjs, .html&lt;script&gt;, .htm&lt;script&gt;
 - `config.json.*` ==> .json
 - `config.xml.*` ==> .xml, .svg
 
@@ -456,7 +456,7 @@ Inline the contents of CSS files ingested by @import and the like directly into 
 
 ## js.noMinify
 
-The .js file is not compressed, and is copied directly to the output directory.
+The .js and .mjs file is not compressed, and is copied directly to the output directory.
 
 `Boolean` `config.js.noMinify || false`
 

@@ -194,7 +194,7 @@ async function core(config) {
 
     // JS
     if (value(config.js.noMinify, true)) {
-      if (file.endsWith('.js')) {
+      if (file.endsWith('.js') || file.endsWith('.mjs')) {
         const jsCode = fs.readFileSync(baseDir + file, 'utf8');
 
         let result = null;
